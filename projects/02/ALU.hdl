@@ -26,15 +26,15 @@
 // if (f == 0)  sets out = x & y  // bitwise and
 // if (no == 1) sets out = !out   // bitwise not
 CHIP ALU {
-    IN  
-        x[16], y[16],  // 16-bit inputs        
+    IN
+        x[16], y[16],  // 16-bit inputs
         zx, // zero the x input?
         nx, // negate the x input?
         zy, // zero the y input?
         ny, // negate the y input?
         f,  // compute (out = x + y) or (out = x & y)?
         no; // negate the out output?
-    OUT 
+    OUT
         out[16], // 16-bit output
         zr,      // (out == 0, 1, 0)
         ng;      // (out < 0,  1, 0)
